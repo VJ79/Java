@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MavenModule/LibArtifactId.iml" filepath="$PROJECT_DIR$/../MavenModule/LibArtifactId.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MavenModule2/MavenModule2.iml" filepath="$PROJECT_DIR$/../MavenModule2/MavenModule2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MavenProject.iml" filepath="$PROJECT_DIR$/MavenProject.iml" />
+    </modules>
+  </component>
+</project>

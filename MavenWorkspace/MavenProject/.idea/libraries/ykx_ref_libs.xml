@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="ykx-ref-libs">
+    <CLASSES>
+      <root url="file://E:/Workspaces/trunk/src-code/ykx-ref-libs" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://E:/Workspaces/trunk/src-code/ykx-ref-libs" />
+    </SOURCES>
+    <jarDirectory url="file://E:/Workspaces/trunk/src-code/ykx-ref-libs" recursive="false" />
+    <jarDirectory url="file://E:/Workspaces/trunk/src-code/ykx-ref-libs" recursive="false" type="SOURCES" />
+  </library>
+</component>
