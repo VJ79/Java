@@ -22,15 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Lib2ArtifactId" />
-        <module name="LibArtifactId" />
+        <module name="Lib3ArtifactId" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Lib2ArtifactId" target="1.5" />
-      <module name="LibArtifactId" target="1.5" />
-      <module name="MavenProject_ArtifactId" target="1.5" />
-      <module name="MavenProject_ArtifactId_modulename" target="1.5" />
+      <module name="Lib3ArtifactId" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
