@@ -1,6 +1,0 @@
----
-differenceTypes: []
-
-packages:
-- io.netty.*
-- org.slf4j.*
