@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47502d89-317b-47eb-870f-bf54169a59e6" name="Default" comment="">
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\GradleWeb_ArtifactId\.idea\libraries\log4j_log4j_1_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\GradleWeb_ArtifactId\build\libs\GradleWeb_ArtifactId-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\GradleWeb_ArtifactId\build\libs\GradleWeb_ArtifactId-1.0-SNAPSHOT.war" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\GradleWeb_ArtifactId\build\tmp\jar\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\Tools\classes\artifacts\web\exploded\web-1.0-SNAPSHOT.war\META-INF\MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\Web\src\main\java\JTest.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\GradleWorkspace\Web\web.iml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule2\MavenModule2.iml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule2\pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule2\src\main\java\JavaInModule2.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule2\src\test\java\Test1.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule2\target\classes\JavaInModule2.class" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule\target\LibArtifactId-1.0-SNAPSHOT.jar" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenModule\target\maven-archiver\pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenProject\.idea\libraries\junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\MavenWorkspace\MavenProject\.idea\libraries\log4j_log4j_1_2_17.xml" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\cache.properties" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\cache.properties.lock" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\fileHashes.bin" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\fileSnapshots.bin" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\outputFileStates.bin" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\.gradle\2.4\taskArtifacts\taskArtifacts.bin" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\HelloWorldTest.java" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\build\libs\gradleJUnit-0.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="F:\github\Java\gradleJUnit\build\tmp\jar\MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="47502d89-317b-47eb-870f-bf54169a59e6" name="Default" comment="" />
     <ignored path="sln.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -946,6 +913,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sln" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sln" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -965,8 +946,18 @@
               <option name="myItemId" value="web-1.0-SNAPSHOT.war" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="sln" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sln" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1405,12 +1396,12 @@
       <workItem from="1435969765277" duration="165000" />
       <workItem from="1435969940811" duration="14624000" />
       <workItem from="1436066128189" duration="7317000" />
-      <workItem from="1436116905499" duration="5541000" />
+      <workItem from="1436116905499" duration="5821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29573000" />
+    <option name="totallyTimeSpent" value="29853000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -1520,9 +1511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1775,9 +1764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
