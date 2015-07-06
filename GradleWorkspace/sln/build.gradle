@@ -1,0 +1,104 @@
+
+
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+def libDir = new File(rootDir, 'lib')
+ext.nettyVersion = '4.0.26.Final'
+
+//buildscript {
+//    repositories {
+//        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+//        jcenter()
+//        mavenCentral()
+//        mavenLocal()
+//    }
+//    dependencies {
+//        classpath 'org.kordamp.gradle:clirr-gradle-plugin:0.2.2'
+//        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:1.12.+'
+//        classpath 'com.bmuschko:gradle-nexus-plugin:2.2'
+//    }
+//}
+
+
+//////////////////////////////////////////
+// Common behavior                      //
+//////////////////////////////////////////
+
+configure(subprojects.findAll { it.name != 'dao' }) {
+    apply plugin: 'java'
+
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main/java', 'src/main/java']
+            }
+            resources {
+                srcDirs = ['src/main/resources']
+            }
+        }
+        test {
+            java {
+                srcDirs = ['src/test/java', 'src/test/java']
+            }
+            resources {
+                srcDirs = ['src/test/resources']
+            }
+        }
+    }
+
+    evaluationDependsOn(':dao')
+
+    group = 'com.skx'
+    version = '3.1.0-SNAPSHOT'
+    sourceCompatibility = JavaVersion.VERSION_1_6
+    targetCompatibility = JavaVersion.VERSION_1_6
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        mavenLocal()
+        maven { url 'file://F:/myMavenRepo/' }
+        maven { url 'lib'}
+    }
+
+    dependencies {
+        compile fileTree(dir: "$libDir",include:'*.jar')
+        //compile fileTree(dir: "E:/Workspaces/trunk/src-code/ykx-ref-libs",include:'*.jar')
+        compile project(':dao')
+
+    }
+
+    /* Compiling */
+    tasks.withType(AbstractCompile) {
+        options.encoding = 'ISO-8859-1'
+        options.fork = true
+        options.debug = true
+        options.compilerArgs = ['-Xlint:all', '-Xlint:-options']
+
+        onlyIf { JavaVersion.current().isJava7Compatible() }
+    }
+
+    project.ext.buildingWith = { propertyName ->
+        project.hasProperty(propertyName) && project.property(propertyName).toBoolean()
+    }
+
+    javadoc {
+        exclude "**/com/mongodb/**/internal/**"
+
+        dependsOn project(':dao').compileJava //We need taglets to be compiled
+        options.author = true
+        options.version = true
+        options.links 'http://docs.oracle.com/javase/7/docs/api/'
+        options.tagletPath project(':dao').sourceSets.main.output.classesDir
+        options.taglets 'ManualTaglet'
+        options.taglets 'ServerReleaseTaglet'
+        options.encoding = 'UTF-8'
+        options.charSet 'UTF-8'
+        options.docEncoding 'UTF-8'
+    }
+
+}
+
+

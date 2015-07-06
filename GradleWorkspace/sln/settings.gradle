@@ -1,0 +1,3 @@
+rootProject.name = 'sln'
+include 'dao','tools','web'
+

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GradleWeb_ArtifactId.iml" filepath="$PROJECT_DIR$/GradleWeb_ArtifactId.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Tools/Tools.iml" filepath="$PROJECT_DIR$/../Tools/Tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/../newMoudle/newMoudle.iml" filepath="$PROJECT_DIR$/../newMoudle/newMoudle.iml" />
       <module fileurl="file://$PROJECT_DIR$/../webapplication/webapplication.iml" filepath="$PROJECT_DIR$/../webapplication/webapplication.iml" />
     </modules>

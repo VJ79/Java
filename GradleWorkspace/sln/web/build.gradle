@@ -1,0 +1,36 @@
+group 'com.skx'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+
+ext {
+   // tomcat = 'E:/apache-tomcat-7.0.59-windows-x64/webapps/'
+    tomcat_home = 'E:/apache-tomcat-7.0.59-windows-x64'
+    tomcat_bin = tomcat_home + '/bin'
+    tomcat_start = tomcat_bin + '/startup.bat'
+    tomcat_stop = tomcat_bin + '/shutdown.bat'
+    tomcat_webapps = tomcat_home + '/webapps'
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.skx:tools:1.0-SNAPSHOT'
+//compile fileTree(dir: 'file://E:/Workspaces/trunk/src-code/ykx-ref-libs', include: '*.jar')
+}
+
+
+task deploy(dependsOn: war) << {
+    println("--deploy .... ")
+    copy {
+        from "build/libs/web-1.0-SNAPSHOT.war"
+        into tomcat_webapps
+        include "*.war"
+        rename('web-1.0-SNAPSHOT.war', 'ROOT.war')
+    }
+}
+
+
+
