@@ -12,15 +12,20 @@
           <element id="dir-copy" path="$PROJECT_DIR$/web/build/resources/main" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="com.skx-dao-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="dao" />
-            <element id="dir-copy" path="$PROJECT_DIR$/dao/build/resources/main" />
-          </element>
+          <element id="library" level="project" name="Gradle: com.skx:tools:1.0-SNAPSHOT" />
           <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.3" />
           <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.3" />
           <element id="library" level="project" name="Gradle: commons-collections:commons-collections:3.2" />
           <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
-          <element id="library" level="project" name="Gradle: com.skx:tools:1.0-SNAPSHOT" />
+          <element id="archive" name="com.skx-misc-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="misc" />
+            <element id="dir-copy" path="$PROJECT_DIR$/misc/build/resources/main" />
+          </element>
+          <element id="archive" name="com.skx-dao-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="dao" />
+            <element id="dir-copy" path="$PROJECT_DIR$/dao/build/resources/main" />
+          </element>
+          <element id="library" level="module" name="Gradle: mongo-java-driver-3.1.0-SNAPSHOT" module-name="misc" />
           <element id="library" level="module" name="Gradle: mongo-java-driver-3.1.0-SNAPSHOT" module-name="web" />
         </element>
       </element>

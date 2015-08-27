@@ -1,14 +1,21 @@
 group 'com.skx'
 version '1.0-SNAPSHOT'
-
+apply plugin: 'com.bmuschko.tomcat'
+apply plugin: 'com.bmuschko.tomcat-base'
 apply plugin: 'java'
 apply plugin: 'war'
+
 
 sourceCompatibility = 1.5
 
 ext {
-   // tomcat = 'E:/apache-tomcat-7.0.59-windows-x64/webapps/'
-    tomcat_home = 'E:/apache-tomcat-7.0.59-windows-x64'
+    if(os=='windows') {
+        tomcat_home = 'E:/apache-tomcat-7.0.59-windows-x64'
+    }else
+    {
+        tomcat_home = '/usr/local/tomcat'
+    }
+
     tomcat_bin = tomcat_home + '/bin'
     tomcat_start = tomcat_bin + '/startup.bat'
     tomcat_stop = tomcat_bin + '/shutdown.bat'
@@ -18,6 +25,9 @@ ext {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile 'com.skx:tools:1.0-SNAPSHOT'
+  //  compile 'com.skx:misc:1.0-SNAPSHOT'
+    compile project(':misc')
+
 //compile fileTree(dir: 'file://E:/Workspaces/trunk/src-code/ykx-ref-libs', include: '*.jar')
 }
 
@@ -32,5 +42,27 @@ task deploy(dependsOn: war) << {
     }
 }
 
+
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.bmuschko:gradle-tomcat-plugin:2.2.2'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    def tomcatVersion = '7.0.59'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
+}
 
 

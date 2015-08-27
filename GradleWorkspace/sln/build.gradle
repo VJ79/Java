@@ -1,24 +1,36 @@
-
-
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-
+def configDir = new File(rootDir, 'config')
 def libDir = new File(rootDir, 'lib')
 ext.nettyVersion = '4.0.26.Final'
 
-//buildscript {
-//    repositories {
-//        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-//        jcenter()
-//        mavenCentral()
-//        mavenLocal()
-//    }
-//    dependencies {
-//        classpath 'org.kordamp.gradle:clirr-gradle-plugin:0.2.2'
-//        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:1.12.+'
-//        classpath 'com.bmuschko:gradle-nexus-plugin:2.2'
-//    }
-//}
+
+ext{
+    if(System.properties['os.name'].contains("Windows"))
+    {
+        os='windows'
+    }else {
+        os='linux'
+    }
+    sysProperties=System.properties
+    // os=System.properties['os.name']
+
+}
+
+buildscript {
+    repositories {
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+        jcenter()
+        mavenCentral()
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.kordamp.gradle:clirr-gradle-plugin:0.2.2'
+        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:1.12.+'
+        classpath 'com.bmuschko:gradle-nexus-plugin:2.2'
+        classpath ("com.bmuschko:gradle-tomcat-plugin:2.2.2")
+    }
+}
 
 
 //////////////////////////////////////////
@@ -27,7 +39,8 @@ ext.nettyVersion = '4.0.26.Final'
 
 configure(subprojects.findAll { it.name != 'dao' }) {
     apply plugin: 'java'
-
+    apply plugin: 'eclipse'
+    println it.name
 
     sourceSets {
         main {
@@ -67,7 +80,31 @@ configure(subprojects.findAll { it.name != 'dao' }) {
         compile fileTree(dir: "$libDir",include:'*.jar')
         //compile fileTree(dir: "E:/Workspaces/trunk/src-code/ykx-ref-libs",include:'*.jar')
         compile project(':dao')
+    }
+    if(it.name=='misc') {
 
+        dependencies {
+            compile fileTree(dir: "$libDir",include:'*.jar')
+            //compile fileTree(dir: "E:/Workspaces/trunk/src-code/ykx-ref-libs",include:'*.jar')
+            compile project(':dao')
+            testCompile group: 'junit', name: 'junit', version: '4.11'
+            //compile 'com.skx:tools:1.0-SNAPSHOT'
+            //compile fileTree(dir: 'file://E:/Workspaces/trunk/src-code/ykx-ref-libs', include: '*.jar')
+            testCompile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.3'
+            testCompile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.3'
+            compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.3'
+            compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.3'
+            compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+            compile 'commons-logging:commons-logging:1.2'
+        }
+
+    }
+
+    /* Code quality */
+    apply plugin: 'checkstyle'
+    checkstyle {
+        toolVersion = "6.2"
+        configFile = new File("$configDir/checkstyle.xml")
     }
 
     /* Compiling */
@@ -99,6 +136,38 @@ configure(subprojects.findAll { it.name != 'dao' }) {
         options.docEncoding 'UTF-8'
     }
 
+    clean << {
+        if(file('bin').exists())
+        {
+            file('bin').deleteDir()
+        }
+    }
+}
+
+task clean << {
+    if(file('out').exists())
+    {
+        file('out').deleteDir()
+    }
+}
+
+task hello << {
+    println os
+    println os.contains("windows")
+    println sysProperties
+//    println in1
+//    println in2
 }
 
 
+hello <<{
+    println 'hello<<'
+}
+
+hello {
+    println 'hello'
+}
+
+hello {
+    println 'hss'
+}
